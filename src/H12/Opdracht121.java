@@ -12,14 +12,13 @@ public class Opdracht121 extends Applet {
             Num2 = Num1[i];
             Num3 = Num2 + Num3;
         }
-        x = Num1.length;
-        Num4 = Num3 / (x+1);
+        Num4 = Num3 / (Num1.length+1);
     }
 
     public void paint(Graphics g) {
         for (teller = 0; teller < Num1.length; teller ++) {
             g.drawString("" + Num1[teller] + ", ",20*(teller+1), 20);
-            g.drawString("Gemiddelde: " + Num4,20,40);
         }
+        g.drawString("Gemiddelde: " + Num4,20,40);
     }
 }
