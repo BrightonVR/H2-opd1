@@ -15,11 +15,9 @@ public class Opdracht81 extends Applet {
     public void init() {
         label = new Label("Text vak");
         text1 = new TextField("",25);
-        but1 = new Button();
-        but1.setLabel( "Ok" );
+        but1 = new Button( "Ok" );
         but1.addActionListener( new But1Listner() );
-        but2 = new Button();
-        but2.setLabel( "Reset" );
+        but2 = new Button( "Reset" );
         but2.addActionListener( new But2Listner() );
         add(label);
         add(text1);
@@ -43,6 +41,7 @@ public class Opdracht81 extends Applet {
         public void actionPerformed(ActionEvent e) {
             String b = "";
             text = b;
+            text1.setText("");
             repaint();
         }
     }

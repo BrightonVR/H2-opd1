@@ -12,7 +12,7 @@ public class Opdracht119 extends Applet {
     public void paint(Graphics g) {
         g.drawRect(50, 50, 160, 160);
 
-        int x = 50, y = 50, breedte, hoogte, row;
+        int x , y = 50, breedte, hoogte, row;
         breedte = 20;
         hoogte = 20;
 

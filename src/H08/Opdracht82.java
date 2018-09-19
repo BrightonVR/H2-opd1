@@ -6,15 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Opdracht82 extends Applet {
-    Button butm;
-    Button butv;
-    Button butpm;
-    Button butpv;
-    int m1;
-    int v1;
-    int pm1;
-    int pv1;
-    int total;
+    Button butm, butv, butpm, butpv;
+    int m1, v1, pm1, pv1, total;
+
 
     public void init() {
         total = 0 + total;

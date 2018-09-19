@@ -21,20 +21,22 @@ public class Praktijkopdracht extends Applet {
     }
 
     public void paint(Graphics g) {
+        // maakt een kleine loop dat het opgegeven nummer
+        // keer 2, tien keer doet en hem elke keer print
+        // en de count in y cooridnaat zoorgt er voor dat het telkens
+        // naar benende gaat elke keer dat het door de loopt gaat
         int count;
         for(count = 0; count < 10; count++) {
             num1 = Num1 * (1 + count);
             g.drawString("" + num1,20,20+count*20);
         }
-        repaint();
     }
 
+    // kijkt naar het nummer in het tekstvak als je op de knop drukt
     class But1Listener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             Num1 = Integer.parseInt( text1.getText() );
-            for (int i = 0; i < 10; i++) {
-                Num2 = Num1 * i;
-            }
+            repaint();
         }
     }
 }

@@ -9,11 +9,9 @@ public class Opdracht63 extends Applet {
     int b;
 
     public void init(){
-        a = 3;
-        b = 4;
+        a = 2147483647;
+        b = 1;
     }
 
-    public void paint(Graphics g){
-        g.drawString("" + -(a+b),20,20);
-    }
+    public void paint(Graphics g){g.drawString("" + (a+b),20,20); }
 }

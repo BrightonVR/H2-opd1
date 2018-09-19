@@ -20,7 +20,7 @@ public class H5Opdr extends Applet
         Dwidth = 200;
 
         // Kg van persoon
-        Val = 60;
+        Val = 40;
         Jer = 100;
         Han = 80;
         // Kg van persoon naar de juiste lengte

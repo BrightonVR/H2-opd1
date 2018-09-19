@@ -13,20 +13,25 @@ public class Show extends Applet {
         setBackground(Color.white);
         g.setColor(Color.blue);
 
+        // Opdracht 2.2? voor je naam en achternaam
         g.setColor(Color.blue);
         g.drawString("Brighton", 200, 60);
         g.setColor(Color.red);
         g.drawString("van Rouendal", 200, 75);
 
+        // Gelijkbenige driehoek opdracht 4.1
         int x[]={100,70,130};
         int y[]={50,100,100};
         g.drawPolygon(x,y,3);
+
+        // Huisje Opdracht 4.2 (het dak is die code van 4.1
         g.drawLine(70,100,70,150);
         g.drawLine(130,100,130,150);
         g.drawLine(70,150,130,150);
         g.drawRect(80,120,10,30);
         g.drawRect(100,110,25,20);
 
+        // Nederlandse vlag opdracht 4.3
         g.setColor(Color.gray);
         g.drawRect(150,200,5,70);
 
@@ -39,6 +44,7 @@ public class Show extends Applet {
         g.setColor(Color.BLUE);
         g.fillRect(155,220,40,10);
 
+        // Staaf diagram van de gewichte opdracht 4.4
         g.setColor(Color.black);
         g.drawRect(300,100,225,200);
         //40 van el kaar af
@@ -70,7 +76,7 @@ public class Show extends Applet {
         g.drawString("Jeroen",380,315);
         g.drawString("Hans",460,315);
 
-
+        // Gele Eclipse opdracht 4.5
         g.setColor(Color.BLUE);
         g.fillRect(80,280,140,90);
 

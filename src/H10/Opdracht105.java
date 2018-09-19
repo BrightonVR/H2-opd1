@@ -14,7 +14,6 @@ public class Opdracht105 extends Applet {
     Button but1;
     double gm;
 
-    ArrayList<Integer> Numbers = new ArrayList<>();
     ArrayList<Integer> Number = new ArrayList<>();
     public void init() {
         but1 = new Button("Ok");

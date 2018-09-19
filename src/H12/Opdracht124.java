@@ -24,12 +24,6 @@ public class Opdracht124 extends Applet {
     }
 
     public void paint(Graphics g) {
-        //for (i = 0; i < 10; i++) {
-          //r = Math.random();
-            //c = (int)(r*10+1);
-            //Rdom[i] = c;
-        //}
-
         if(found == true) {
             g.drawString("waarde gevonden "+Num2+" Index "+Num3,20,50);
         }

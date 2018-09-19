@@ -20,7 +20,7 @@ public class Opdracht62 extends Applet {
         day = hour * 24;
         week = day * 7;
         month = week * 4;
-        year = month * 12;
+        year = day * 365;
     }
 
     public void paint(Graphics g){

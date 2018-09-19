@@ -6,24 +6,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Praktijkopdracht extends Applet {
-    TextField Num1;
-    TextField Num2;
-    Button M;
-    Button D;
-    Button A;
-    Button S;
-    double num1;
-    double num2;
-    double num3;
+    TextField Num1, Num2;
+    Button M, D, A, S;
+    double num1, num2, num3;
 
     public void init() {
         Num1 = new TextField("",15);
-        Num1.addActionListener( new Num1Listener() );
         add(Num1);
         Num2 = new TextField("",15);
-        Num2.addActionListener( new Num2Listener() );
         add(Num2);
 
+        // Buttons
         M = new Button("*");
         M.addActionListener( new MListener() );
         add(M);
@@ -39,25 +32,14 @@ public class Praktijkopdracht extends Applet {
     }
 
     public void paint(Graphics g) {
-        g.drawString("Number = " + num3,50,60);
-    }
-
-    class Num1Listener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            String s = Num1.getText();
-            num1 = Double.parseDouble( s );
-        }
-    }
-
-    class Num2Listener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            String s = Num2.getText();
-            num2 = Double.parseDouble( s );
-        }
+        Num1.setText("" + num3);
     }
 
     class MListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            num1 = Double.parseDouble( Num1.getText() );
+            num2 = Double.parseDouble( Num2.getText() );
+            Num2.setText("");
             num3 = num1 * num2;
             repaint();
         }
@@ -65,6 +47,9 @@ public class Praktijkopdracht extends Applet {
 
     class DListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            num1 = Double.parseDouble( Num1.getText() );
+            num2 = Double.parseDouble( Num2.getText() );
+            Num2.setText("");
             num3 = num1 / num2;
             repaint();
         }
@@ -72,6 +57,9 @@ public class Praktijkopdracht extends Applet {
 
     class AListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            num1 = Double.parseDouble( Num1.getText() );
+            num2 = Double.parseDouble( Num2.getText() );
+            Num2.setText("");
             num3 = num1 + num2;
             repaint();
         }
@@ -79,6 +67,9 @@ public class Praktijkopdracht extends Applet {
 
     class SListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
+            num1 = Double.parseDouble( Num1.getText() );
+            num2 = Double.parseDouble( Num2.getText() );
+            Num2.setText("");
             num3 = num1 - num2;
             repaint();
         }

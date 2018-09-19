@@ -17,7 +17,6 @@ public class H08Test extends Applet {
         H = 400;
         setSize(W,H);
 
-
         tekstvak = new TextField("", 20);
         label = new Label("Type een getal");
         tekstvak.addActionListener( new TekstvakListener() );

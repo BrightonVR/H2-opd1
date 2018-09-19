@@ -1,9 +1,10 @@
 package H08;
 
-import java.applet.*;
+import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 
 public class Opdracht83 extends Applet {
     Button but1;
@@ -11,21 +12,20 @@ public class Opdracht83 extends Applet {
     TextField text1;
     double num1;
     double num2;
-
+    DecimalFormat fmt = new DecimalFormat("#.##");
     public void init() {
         label = new Label("Euro: ");
         text1 = new TextField("",25);
         but1 = new Button();
         but1.setLabel("Ok");
         but1.addActionListener( new But1Listner() );
-
         add(label);
         add(text1);
         add(but1);
     }
 
     public void paint(Graphics g) {
-        g.drawString("Bedrag inc. BTW(21%): " + num2,40,60);
+        g.drawString("Bedrag inc. BTW(21%): " + fmt.format(num2),40,60);
     }
 
     class But1Listner implements ActionListener {
