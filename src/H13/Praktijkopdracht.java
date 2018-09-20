@@ -9,11 +9,13 @@ public class Praktijkopdracht extends Applet {
     }
 
     public void paint(Graphics g) {
-        for (int y = 0; y < 10; y++) {
+        for (int y = 0; y < 2; y++) {
             for (int count = 0; count < 5; count++) {
                 if (y % 2 == 0) {
                     tree(g, 60 + count * 80, 60+y*160, 30, 100);
-                } else{tree(g, 40 + count * 80, 60+y*160, 30, 100);}
+                } else{
+                    tree(g, 40 + count * 80, 60+y*160, 30, 100);
+                }
             }
         }
     }
