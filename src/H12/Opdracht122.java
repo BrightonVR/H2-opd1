@@ -13,6 +13,4 @@ public class Opdracht122 extends Applet {
             add(buttons[i]);
         }
     }
-
-    public void paint(Graphics g) {}
 }
