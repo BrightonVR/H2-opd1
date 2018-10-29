@@ -4,18 +4,22 @@ import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 public class Praktijkopdracht extends Applet {
-    TextField input;
-    Button play;
-    Label label;
-    String game;
+    private TextField input;
+    private Button play;
+    private String game;
 
-    int resterend, comp, random, i, playing;
-    int next[] = {21,17,13,9,5,1};
+    private int resterend, comp, random, i, playing;
+    private int next[] = {21,17,13,9,5,1};
+    private int xPos, yPos;
+
+    private Image image;
+    private URL pad;
 
     public void init() {
-        label = new Label("Hoeveel smileys neem je(één, twee of drie)?");
+        Label label = new Label("Hoeveel smileys neem je(één, twee of drie)?");
         input = new TextField("", 13);
         play = new Button("Speel");
         play.addActionListener( new PlayListener() );
@@ -24,10 +28,16 @@ public class Praktijkopdracht extends Applet {
         add(input);
         add(play);
 
-        setSize(600,600);
+        pad = Praktijkopdracht.class.getResource("../resources/");
+        image = getImage(pad, "smily.png");
+
+        setSize(600,900);
         resterend = 23;
         comp = 0;
         playing = 1;
+
+        xPos = 20;
+        yPos = 30;
     }
 
     public void paint(Graphics g) {
@@ -35,6 +45,16 @@ public class Praktijkopdracht extends Applet {
         if (playing == 1) {
             g.drawString("De computer heeft " + comp + " smileys weggehaald.", 10, 70);
             g.drawString("Aantal resterende smileys: " + resterend + ". Jouw beurt.", 10, 90);
+
+            for (int p = 0; p < resterend; p++) {
+                if (p == 0 || p == 5 || p == 10 || p == 15 || p == 20) {
+                    yPos += 30;
+                    xPos = 20;
+                }
+                g.drawImage(image, xPos, yPos,20,20,this);
+                xPos += 30;
+            }
+
         } else if (playing == 2) {
             g.drawString(game, 10, 70);
             try {
@@ -56,6 +76,8 @@ public class Praktijkopdracht extends Applet {
     class PlayListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             int getinput = Integer.parseInt(input.getText());
+            xPos = 20;
+            yPos = 100;
 
             if (getinput < 1 || getinput > 3) {
                 game = "Invalid input!";
