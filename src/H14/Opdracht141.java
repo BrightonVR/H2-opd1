@@ -28,7 +28,7 @@ public class Opdracht141 extends Applet {
         public void actionPerformed(ActionEvent e) {
             double r = Math.random();
             b = (int)(r*4);
-            c = (int)(r*12);
+            c = (int)(r*13);
             repaint();
         }
     }
